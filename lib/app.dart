@@ -16,7 +16,7 @@ class InductionApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'B.Tech Induction App',
+      title: 'Points Rewards',
       theme: InductionAppTheme.dark,
       home: const HomePage(),
     );
@@ -87,13 +87,13 @@ class _HomePageState extends State<HomePage> {
                                     textAlign: TextAlign.center,
                                     validator: (value) {
                                       if (value == null || value.isEmpty) {
-                                        return "Please enter user's roll number";
+                                        return "Please enter user's username";
                                       }
                                       return null;
                                     },
                                     decoration: const InputDecoration(
                                       filled: false,
-                                      hintText: "Enter roll number here",
+                                      hintText: "Enter username here",
                                       alignLabelWithHint: true,
                                       floatingLabelAlignment:
                                           FloatingLabelAlignment.center,
@@ -126,6 +126,7 @@ class _HomePageState extends State<HomePage> {
                                                 rollNumberTextEditingController
                                                     .text));
                                       }
+                                      rollNumberTextEditingController.clear();
                                     },
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: InductionAppColor.yellow,
@@ -146,12 +147,20 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class PointRewardPage extends StatelessWidget {
+class PointRewardPage extends StatefulWidget {
   const PointRewardPage({super.key, required this.username});
   final String username;
 
   @override
+  State<PointRewardPage> createState() => _PointRewardPageState();
+}
+
+class _PointRewardPageState extends State<PointRewardPage> {
+
+  int max = 15;
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
@@ -195,7 +204,7 @@ class PointRewardPage extends StatelessWidget {
                         stream: FirebaseFirestore.instance
                             .collection('users')
                             .where("username",
-                                isEqualTo: username.toLowerCase().trim())
+                                isEqualTo: widget.username.toLowerCase().trim())
                             .snapshots(),
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
@@ -270,7 +279,7 @@ class PointRewardPage extends StatelessWidget {
                                           FirebaseFirestore.instance
                                               .collection('users')
                                               .where("username",
-                                                  isEqualTo: username
+                                                  isEqualTo: widget.username
                                                       .toLowerCase()
                                                       .trim())
                                               .get()
@@ -325,7 +334,7 @@ class PointRewardPage extends StatelessWidget {
                                           FirebaseFirestore.instance
                                               .collection('users')
                                               .where("username",
-                                                  isEqualTo: username
+                                                  isEqualTo: widget.username
                                                       .toLowerCase()
                                                       .trim())
                                               .get()
@@ -335,25 +344,41 @@ class PointRewardPage extends StatelessWidget {
                                             if (documents.isNotEmpty) {
                                               final DocumentSnapshot document =
                                                   documents.first;
-                                              int factor = 1;
-                                              int current = document['points'] + 5;
-                                              if (factor < 3) {
+
+                                              int currentToAdd = 5;
+
+                                              if (currentToAdd < max) {
                                                 FirebaseFirestore.instance
                                                     .collection('users')
                                                     .doc(document.id)
                                                     .update({
-                                                  'points': current
+                                                  'points':
+                                                      document['points'] + 5
                                                 });
-                                                current += 1;
+                                              setState(() {
+                                                currentToAdd += 5;
+                                              });
                                               } else {
                                                 context.showSnackBar(
-                                                    "User has reached maximum points");
+                                                    "You can only reward a maximum of $max points per time");
                                               }
                                             }
                                           });
                                         }),
                                   ],
-                                )
+                                ),
+
+                                const SizedBox(
+                                  height: 24,
+                                ),
+
+                                ElevatedButton(
+                                    onPressed: ()=> context.pop(),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: InductionAppColor.yellow,
+                                    ),
+                                    child: const Text('Continue'),
+                                  )
                               ],
                             );
                           } else if (snapshot.hasError) {
