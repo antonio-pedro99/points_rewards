@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "68444770162",
+    "firebase_url": "https://alive-dsm-default-rtdb.firebaseio.com",
+    "project_id": "alive-dsm",
+    "storage_bucket": "alive-dsm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68444770162:android:48f98840b5433a3cd717eb",
+        "android_client_info": {
+          "package_name": "com.example.alive_driver_status_monitoring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68444770162-s9a75skfog9650ibo3p3p7vneju904l5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSkFZzH5rRZbF8g6qKqxaE5_SpvUNr5kU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68444770162-faei0g5i87vbtq5ckf4lu16jllmg2sk5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "68444770162-ulmp0sihb38886koflhddnlthhn866ce.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iiitd.inductionteam2023.btechInduction2023"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68444770162:android:1cadc7847000e433d717eb",
+        "android_client_info": {
+          "package_name": "com.example.points_rewards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68444770162-s9a75skfog9650ibo3p3p7vneju904l5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSkFZzH5rRZbF8g6qKqxaE5_SpvUNr5kU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68444770162-faei0g5i87vbtq5ckf4lu16jllmg2sk5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "68444770162-ulmp0sihb38886koflhddnlthhn866ce.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iiitd.inductionteam2023.btechInduction2023"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68444770162:android:d15e6e23717cd0eed717eb",
+        "android_client_info": {
+          "package_name": "com.iiitd.inductionteam2023.btech_induction_2023"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68444770162-s0pq6ni0ah2pf8sgveqgm0domg3c10uo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iiitd.inductionteam2023.btech_induction_2023",
+            "certificate_hash": "e7f3bdcaeeb99066a70086c86b23301d0e2c996c"
+          }
+        },
+        {
+          "client_id": "68444770162-s9a75skfog9650ibo3p3p7vneju904l5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSkFZzH5rRZbF8g6qKqxaE5_SpvUNr5kU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68444770162-faei0g5i87vbtq5ckf4lu16jllmg2sk5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "68444770162-ulmp0sihb38886koflhddnlthhn866ce.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iiitd.inductionteam2023.btechInduction2023"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

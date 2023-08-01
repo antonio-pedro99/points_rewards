@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>68444770162-jjrogjsag96vh9ao2i5jfrk7d3hbn0kq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.68444770162-jjrogjsag96vh9ao2i5jfrk7d3hbn0kq</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>68444770162-s0pq6ni0ah2pf8sgveqgm0domg3c10uo.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDjCT-kGI6UR0XdSr36ki4RnHd3wk_miFg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>68444770162</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.pointsRewards</string>
+	<key>PROJECT_ID</key>
+	<string>alive-dsm</string>
+	<key>STORAGE_BUCKET</key>
+	<string>alive-dsm.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:68444770162:ios:e47b131c4b98dde0d717eb</string>
+	<key>DATABASE_URL</key>
+	<string>https://alive-dsm-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
